@@ -1,0 +1,12 @@
+mysql
+
+SELECT *
+FROM employee
+WHERE hire_date >=CURRENT_DATE - INTERVAL 30 DAY;
+
+
+postgres
+
+SELECT * 
+FROM employee
+WHERE hire_date >= CURRENT_DATE - INTERVAL '30 days';
