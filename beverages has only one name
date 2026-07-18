@@ -1,0 +1,5 @@
+Write a query to find beverages where the contributor has only one name (no space).
+
+beverages - name, id 
+
+select * from beverages where name like '%%';
