@@ -1,0 +1,16 @@
+table - name ,gender 
+
+update table set gender = 
+case when 'M' then 'F' 
+when 'F' then 'M' 
+else gender
+end;
+
+
+SELECT
+    CASE
+        WHEN gender = 'M' THEN 'F'
+        WHEN gender = 'F' THEN 'M'
+        ELSE gender
+    END AS gender
+FROM table_name;
