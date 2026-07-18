@@ -1,0 +1,11 @@
+Write a query that lists all the customers who had purchases in Jan'26 and did not make any purchases in Feb'26.
+
+customer - custid , name , phone
+purchase - custid , purchase_date, purchase_id
+
+
+select c.custid from customer c
+left join purchase p 
+on c.custid = p.custid 
+where p.purchase_date >= 1/01/2026 And p.purchase_date <=31/01/2026 and 
+p.custid not in ( select custid from purchase where purchase_date >= 1/02/2026 and purchase_date<1/03/2026)
