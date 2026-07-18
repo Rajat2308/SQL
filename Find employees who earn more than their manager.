@@ -1,0 +1,1 @@
+select emp.id from employee emp join employee e on emp.managerid = e.id where emp.salary > e.salary
