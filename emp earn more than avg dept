@@ -1,0 +1,5 @@
+How do you find employees who earn more than the average salary in their department?
+
+emp - id, name ,salary, dept
+
+select * from emp e where salary > ( select avg(salary) from emp e2 where e.dept = e2.dept)
