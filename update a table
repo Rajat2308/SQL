@@ -1,0 +1,3 @@
+update tablename 
+set columnname = value
+where condition 
