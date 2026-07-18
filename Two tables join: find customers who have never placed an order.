@@ -1,0 +1,4 @@
+customer - custid, name , phone
+Order - custid , orderid
+
+select cust.id from customer cust left join order or on cust.id = or.custId where or.orderId is null;
