@@ -1,0 +1,5 @@
+Write a query to find all employees hired after 2023, sorted by salary descending.
+
+employee - empid, hiredate
+
+select * from employee e where year(e.hiredate) > 2023 order by e.salary desc;
