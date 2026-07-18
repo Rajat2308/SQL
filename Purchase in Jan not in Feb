@@ -9,3 +9,22 @@ left join purchase p
 on c.custid = p.custid 
 where p.purchase_date >= 1/01/2026 And p.purchase_date <=31/01/2026 and 
 p.custid not in ( select custid from purchase where purchase_date >= 1/02/2026 and purchase_date<1/03/2026)
+
+
+
+SELECT c.custid, c.name, c.phone
+FROM customer c
+WHERE EXISTS (
+    SELECT 1
+    FROM purchase p
+    WHERE p.custid = c.custid
+      AND p.purchase_date >= '2026-01-01'
+      AND p.purchase_date < '2026-02-01'
+)
+AND NOT EXISTS (
+    SELECT 1
+    FROM purchase p
+    WHERE p.custid = c.custid
+      AND p.purchase_date >= '2026-02-01'
+      AND p.purchase_date < '2026-03-01'
+);
