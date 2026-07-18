@@ -14,3 +14,12 @@ SELECT
         ELSE gender
     END AS gender
 FROM table_name;
+
+
+
+
+
+SELECT -- Count employees by department using aggregate fun with case
+    SUM(CASE WHEN dept = 'IT' THEN 1 ELSE 0 END) AS IT_Count,
+    SUM(CASE WHEN dept = 'HR' THEN 1 ELSE 0 END) AS HR_Count
+FROM Employee;
