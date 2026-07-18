@@ -1,0 +1,3 @@
+Insert into tablename (column1,column2)values (1,2)
+
+delete from tablename where condition
