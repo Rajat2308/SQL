@@ -1,0 +1,2 @@
+Alter table 
+add cloumnname varchar(50) , add cloumnname int
