@@ -1,4 +1,4 @@
-alter tablename
+ALTER TABLE table_name
 drop columnname 
 
 
