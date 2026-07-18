@@ -1,0 +1,5 @@
+alter tablename
+drop columnname 
+
+
+truncate table tablename;
