@@ -1,0 +1,8 @@
+mysql 
+
+select * from tablename order by rand() limit 5;
+
+
+postgres 
+
+select * from tablename order by random() limit 5;
